@@ -14,6 +14,7 @@
         <th>Soyadı</th>
         <th>Cinsiyet</th>
         <th>Kulüp</th>
+        <th>İşlemler</th>
     </tr>
     <tbody>
         @foreach (var ogrenci in Model)
@@ -24,6 +25,9 @@
                 <td>@ogrenci.OGRSOYAD</td>
                 <td>@ogrenci.OGRCINSIYET</td>
                 <td>@ogrenci.OGRKULUP</td>
+                <td><a href="/Ogrenci/Sil/@ogrenci.OGRENCIID" class="btn btn-danger">Sil</a>
+                    <a href="/Ogrenci/Guncelle/@ogrenci.OGRENCIID" class="btn btn-info">Güncelle</a>
+                </td>
                 
             </tr>
         }

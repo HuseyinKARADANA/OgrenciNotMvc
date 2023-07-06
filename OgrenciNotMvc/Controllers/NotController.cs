@@ -16,5 +16,18 @@ namespace OgrenciNotMvc.Controllers
             var notlar = db.TBLNOTLARs.ToList();
             return View(notlar);
         }
+        [HttpGet]
+        public ActionResult YeniSinav()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult YeniSinav(TBLNOTLAR n)
+        {
+            db.TBLNOTLARs.Add(n);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
     }
 }

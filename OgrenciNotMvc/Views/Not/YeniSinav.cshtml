@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "YeniSinav";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div style="margin-top:10px">
+        <label>Öğrenci Id:</label><input type="text" class="form-control" name="OGRID" /><!-- entity de bulunan ders adı ile name aynı olmalı-->
+    </div>
+    <div style="margin-top:10px">
+        <label>Ders Adı:</label><input type="text" class="form-control" name="DERSID" /><!-- entity de bulunan ders adı ile name aynı olmalı-->
+    </div>
+    <div style="margin-top:10px">
+        <label>Sınav 1:</label><input type="text" class="form-control" name="SINAV1" /><!-- entity de bulunan ders adı ile name aynı olmalı-->
+    </div>
+    <div style="margin-top:10px">
+        <label>Sınav 2:</label><input type="text" class="form-control" name="SINAV2" /><!-- entity de bulunan ders adı ile name aynı olmalı-->
+    </div>
+    <div style="margin-top:10px">
+        <label>Sınav 3:</label><input type="text" class="form-control" name="SINAV3" /><!-- entity de bulunan ders adı ile name aynı olmalı-->
+    </div>
+    <div style="margin-top:10px">
+        <label>Proje:</label><input type="text" class="form-control" name="PROJE" /><!-- entity de bulunan ders adı ile name aynı olmalı-->
+    </div>
+    <div style="margin-top:10px">
+        <label>Ortalama:</label><input type="text" class="form-control" name="ORTALAMA" /><!-- entity de bulunan ders adı ile name aynı olmalı-->
+    </div>
+    <div style="margin-top:10px">
+        <label>Durum:</label><input type="text" class="form-control" name="DURUM" /><!-- entity de bulunan ders adı ile name aynı olmalı-->
+    </div>
+
+    <div style="margin-top:10px">
+        <button class="btn btn-info">Sınav Ekle</button>
+
+    </div>
+</form>
