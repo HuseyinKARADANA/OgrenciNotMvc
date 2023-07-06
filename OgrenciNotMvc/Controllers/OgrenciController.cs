@@ -19,14 +19,23 @@ namespace OgrenciNotMvc.Controllers
         [HttpGet]
         public ActionResult YeniOgrenci()
         {
+            List<SelectListItem> degerler = (from i in db.TBLKULUPLERs.ToList()
+                                             select new SelectListItem
+                                             {
+                                                 Text = i.KULUPAD,
+                                                 Value = i.KULUPID.ToString()
+                                             }).ToList();
+            ViewBag.dgr = degerler;
             return View();
         }
         [HttpPost]
         public ActionResult YeniOgrenci(TBLOGRENCILER o)
         {
+            var klp=db.TBLKULUPLERs.Where(m=>m.KULUPID == o.TBLKULUPLER.KULUPID).FirstOrDefault();
+            o.TBLKULUPLER = klp;
             db.TBLOGRENCILERs.Add(o);
             db.SaveChanges();
-            return View();
+            return RedirectToAction("Index");
         }
     }
 }
