@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "YeniDers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div>
+        <label>Ders Adı:</label><input type="text" class="form-control" name="DERSAD" /><!-- entity de bulunan ders adı ile name aynı olmalı-->
+    </div>
+    <div style="margin-top:10px">
+        <button class="btn btn-info" onclick="kayit()" >Ders Ekle</button>
+        
+    </div>
+</form>
+<script>
+    function kayit() {
+        alert("Ders Kaydı Yapıldı");
+    }
+    
+</script>
+
+

@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "YeniOgrenci";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div style="margin-top:10px">
+        <label>Öğrenci Adı:</label><input type="text" class="form-control" name="OGRAD" /><!-- entity de bulunan ders adı ile name aynı olmalı-->
+    </div>
+    <div style="margin-top:10px">
+        <label>Öğrenci Soyadı:</label><input type="text" class="form-control" name="OGRSOYAD" /><!-- entity de bulunan ders adı ile name aynı olmalı-->
+    </div>
+    <div style="margin-top:10px">
+        <label>Öğrenci Foto:</label><input type="text" class="form-control" name="OGRFOTO" /><!-- entity de bulunan ders adı ile name aynı olmalı-->
+    </div>
+    <div style="margin-top:10px">
+        <label>Öğrenci Cinsiyet:</label><input type="text" class="form-control" name="OGRCINSIYET" /><!-- entity de bulunan ders adı ile name aynı olmalı-->
+    </div>
+    <div style="margin-top:10px">
+        @Html.DropDownList("Öğrenci Cinsiyet", 
+       new[]
+       {
+           new SelectListItem(){Value="Erkek" , Text="Erkek"  },
+           new SelectListItem(){Value="Kadın" , Text="Kadın"  },
+       },"Cinsiyet Seçiniz...",new {@class="form-control"})   
+    </div>
+    <div style="margin-top:10px">
+        <label>Öğrenci Kulüp:</label><input type="text" class="form-control" name="OGRKULUP" /><!-- entity de bulunan ders adı ile name aynı olmalı-->
+    </div>
+    <div style="margin-top:10px">
+        <button class="btn btn-info" onclick="kayit()">Öğrenci Ekle</button>
+
+    </div>
+</form>
+<script>
+    function kayit() {
+        alert("Öğrenci Kaydı Yapıldı");
+    }
+
+</script>
+
