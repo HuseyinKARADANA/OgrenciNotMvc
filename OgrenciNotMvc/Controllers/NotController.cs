@@ -42,6 +42,14 @@ namespace OgrenciNotMvc.Controllers
             {
                 int ortalama = (sinav1 + sinav2 + sinav3 + proje) / 4;
                 ViewBag.ort = ortalama;
+                if (ortalama > 50)
+                {
+                    ViewBag.drm = "True";
+                }
+                else
+                {
+                    ViewBag.drm = "False";
+                }
             }
             if (model.islem == "NOTGUNCELLE")
             {
