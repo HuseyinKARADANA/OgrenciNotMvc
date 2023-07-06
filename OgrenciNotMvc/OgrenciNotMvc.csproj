@@ -600,6 +600,8 @@
     <Content Include="Views\Ogrenci\YeniOgrenci.cshtml" />
     <Content Include="Views\Not\YeniSinav.cshtml" />
     <Content Include="Views\HesapTest\Index.cshtml" />
+    <Content Include="Views\Kulupler\KulupGetir.cshtml" />
+    <Content Include="Views\Default\DersGetir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
