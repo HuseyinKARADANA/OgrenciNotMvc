@@ -43,5 +43,12 @@ namespace OgrenciNotMvc.Controllers
             return View("KulupGetir",kulup);
         }
 
+        public ActionResult Guncelle(TBLDERSLER p)
+        {
+            var ders = db.TBLDERSLERs.Find(p.DERSID);
+            ders.DERSAD=p.DERSAD;
+            db.SaveChanges();
+            return RedirectToAction("Index","Default");//Default index'e gidecek
+        }
     }
 }
